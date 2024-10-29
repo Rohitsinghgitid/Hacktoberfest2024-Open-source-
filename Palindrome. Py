@@ -1,0 +1,11 @@
+def is_palindrome(s):
+    # Filter out non-alphanumeric characters and convert to lowercase
+    cleaned = ''.join(char.lower() for char in s if char.isalnum())
+    # Check if cleaned string is equal to its reverse
+    return cleaned == cleaned[::-1]
+
+# Input from the user
+text = input("Enter a string: ")
+
+# Check if it's a palindrome
+print(f"'{text}' is {'a palindrome' if is_palindrome(text) else 'not a palindrome'}.")
